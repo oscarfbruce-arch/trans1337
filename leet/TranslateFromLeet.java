@@ -1,5 +1,5 @@
-package java;
-import java.io.*;
+package leet;
+//import java.io.*;
 //import java.nio.*;
 //import java.util.*;
 public class TranslateFromLeet {
