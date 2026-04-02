@@ -1,23 +1,13 @@
 import java.io.*;
 //import java.nio.*;
-import java.util.*;
-public class mainClass{
-    public void main(String [] args){
-        Scanner inputScan = new Scanner(System.in);
-        String inputString = inputScan.nextLine();
-        System.out.println("Input String: " + inputString);
-        
-        String output = transToLeet(inputString);
-        System.out.println("output: " + output);
-        
-    }
-
-
-    public String transToLeet(String input){
+//import java.util.*;
+public class TranslateToLeet{
+    
+public String transToLeet(String input, String CSV){
     //method that calls everything and then runs the for loop to return translated area
     String leetString = "";
 
-    String[][] transArray = csvToArrayList("leetSimple.csv");
+    String[][] transArray = csvToArrayList(CSV);
     
     for (int i = 0; i < input.length(); i++){
 
@@ -45,7 +35,7 @@ public class mainClass{
     }
     }
 
-    private String[][] csvToArrayList(String csv){
+    private String[][] csvToArrayList(String csv){ //takes a comma separated CSV and turns it into primitive 2d array
     int lineCount = 0; 
     
     //first pass, count lines of csv
@@ -82,3 +72,4 @@ public class mainClass{
     return CSVarray;
 }
 }
+  
